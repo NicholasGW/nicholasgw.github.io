@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>Nick Kennedy</title>
- <link href="http://localhost:4000/material-theme/atom.xml" rel="self"/>
- <link href="http://localhost:4000/material-theme"/>
- <updated>2016-12-19T14:32:13-05:00</updated>
- <id>http://localhost:4000/material-theme</id>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000"/>
+ <updated>2016-12-19T15:09:42-05:00</updated>
+ <id>http://localhost:4000</id>
  <author>
    <name>Nick Kennedy</name>
    <email></email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>JS TL;DR</title>
-   <link href="http://localhost:4000/material-theme/2016/12/19/javascript-tldr.html"/>
+   <link href="http://localhost:4000/2016/12/19/javascript-tldr.html"/>
    <updated>2016-12-19T00:00:00-05:00</updated>
-   <id>http://localhost:4000/material-theme/2016/12/19/javascript-tldr</id>
+   <id>http://localhost:4000/2016/12/19/javascript-tldr</id>
    <content type="html">&lt;p&gt;This is everything I know about JavaScript in TL;DR form. JS is great, the ecosystem is huge and hard for beginners. Gain some sanity here. More in-depth writing can be down in the series of articles I’m writing called “A concise(ish) guide to JavaScript”.&lt;/p&gt;
 
 &lt;h3 id=&quot;begin&quot;&gt;Begin&lt;/h3&gt;
@@ -48,15 +48,53 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
+&lt;p&gt;Modules, frameworks, and libraries are all fundamentally the same thing but are used for different purposes.&lt;/p&gt;
+
+&lt;p&gt;Modules are a way of breaking your code into pieces to make it more re-usable and readable. If you have 3 functions, you can split them into 3 modules.&lt;/p&gt;
+
+&lt;p&gt;A module is generally your own code that you split up to make it more reusable and easy to think about instead of having one giant file with 1000s of lines of code.&lt;/p&gt;
+
+&lt;p&gt;A library is someone else’s code you want to use that helps accomplish a specific set of tasks. It is like a swiss army knife. It doesn’t tell you how to use the functions or how to build your app, it just makes common calculations/operations more straightforward. Think like a math library, a date library, etc.&lt;/p&gt;
+
+&lt;p&gt;A framework is also someone else’s code but designed around guiding you towards a specific design pattern. Quite literally a framework for an application. It says “this is a good way to build apps, here are a bunch of helper functions to make that easy for you”.&lt;/p&gt;
+
+&lt;p&gt;People often use library/framework interchangeably but the fundamental difference is above. Just someone else’s code you’re bringing into your own project because it’s better/already done/tested by a bunch of people.&lt;/p&gt;
+
 &lt;p&gt;Node is a JS Runtime that uses Chrome’s V8 Engine to let you run JS code on a computer or server directly rather than in a browser. It also lets you do cool things like read/write files or use sockets, something you can’t really do as easily with code in a browser.&lt;/p&gt;
+
+&lt;p&gt;JS didn’t have an official module specification until very recently (ES2016). What does this mean? Before the only way to get code was to add more script tags in the browser. They had to be in the right order if a library had a dependency on another library, and wouldn’t always work properly. By dependency I mean the library or framework needs another framework/library to function properly, so it has to be loaded first.&lt;/p&gt;
+
+&lt;p&gt;When node started getting popular, people decided to maintain and release their own module specification called CommonJS. This was to let people import/export modules and libraries locally similar to the way they were used to doing it with other languages like C, Java, Etc. The syntax looked like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myLibrary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'library'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This would pull in whatever was in &lt;code class=&quot;highlighter-rouge&quot;&gt;library.js&lt;/code&gt; and exported on the module object. &lt;code class=&quot;highlighter-rouge&quot;&gt;library.js&lt;/code&gt; needed to have this at the end:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;module.exports = {
+  stuff
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Basically library would expose an object, and using ‘require’ would allow you use this object inside another JS file. This was a much better setup thank using many many link tags!&lt;/p&gt;
+
+&lt;p&gt;To help manage all these libraries and libraries that have dependencies, Node Package Manager(NPM) was created. NPM is basically a program that you can run and say “I am starting a JS project, let me download and use libraries/frameworks if I need them.”&lt;/p&gt;
+
+&lt;p&gt;NPM uses a JSON configuration file called package.json to understand how libraries and frameworks work and resolve all the dependencies and flatten them. This means it looks at your package.json file, and looks at all the dependcies you’ve listed, then looks at the dependecies of all those packages, until it goes all the way down the chain and downloads all the right stuff. A big improvement over script tag!&lt;/p&gt;
+
+&lt;p&gt;The package.json file makes it really easy for someone else to download your project and use it, tweak it, or work on it.&lt;/p&gt;
+
+&lt;p&gt;Git is a system for doing &lt;em&gt;version control&lt;/em&gt;. This means that multiple people can edit the set of files without screwing things up. All the changes you make are tracked, reversible, etc.&lt;/p&gt;
 </content>
  </entry>
  
  <entry>
    <title>A concise(ish) guide to Javascript, part 1</title>
-   <link href="http://localhost:4000/material-theme/2016/12/19/a-concise-guide-part-1.html"/>
+   <link href="http://localhost:4000/2016/12/19/a-concise-guide-part-1.html"/>
    <updated>2016-12-19T00:00:00-05:00</updated>
-   <id>http://localhost:4000/material-theme/2016/12/19/a-concise-guide-part-1</id>
+   <id>http://localhost:4000/2016/12/19/a-concise-guide-part-1</id>
    <content type="html">&lt;p&gt;Javascript (JS) is awesome. The community is awesome, the ecosystem is awesome, and how easily you can build cool stuff is awesome. However, Javascript fatigue is a real problem which stems from developers new and experienced alike having trouble keeping up with the changing ecosystem. Javascript the language itself is complex enough, but then stack on all the libraries, frameworks, bundlers, compilers, transpilers, linters, platforms and it’s enough for anyone to get confused.&lt;/p&gt;
 
 &lt;p&gt;This article and the ones that proceed it are designed to sum up the different parts of the ecosystem to help new programmers get up to speed more quickly. Although each one of them requires a lot of time to become an expert, and very few people (actually, probably noone) understands them all a super high level, these articles can be kind of a “reference” to help you get the gist of each part. Let’s dive in!&lt;/p&gt;
