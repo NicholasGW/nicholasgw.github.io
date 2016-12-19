@@ -3,7 +3,7 @@ description: "Blog posts about JS"
 about: "I like Javascript, React, Elm, and learning about FP!"
 location: "Toronto, Canada"
 email:
-baseurl: "/material-theme"
+baseurl: ""
 
 url: "http://nicholasgwk.github.io" # replace by your site's url
 twitter_username: nicholasgwk
