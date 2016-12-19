@@ -6,6 +6,9 @@ tags: ['intro', 'javascript', 'ecosystem']
 author: "Nick Kennedy"
 ---
 
+***WORK IN PROGRESS***
+
+
 This is everything I know about JavaScript in TL;DR form. JS is great, the ecosystem is huge and hard for beginners. Gain some sanity here. More in-depth writing can be down in the series of articles I'm writing called "A concise(ish) guide to JavaScript".
 
 

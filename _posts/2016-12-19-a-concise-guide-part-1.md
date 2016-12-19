@@ -6,6 +6,8 @@ tags: ['intro', 'javascript', 'ecosystem']
 author: "Nick Kennedy"
 ---
 
+*** WORK IN PROGRESS ***
+
 Javascript (JS) is awesome. The community is awesome, the ecosystem is awesome, and how easily you can build cool stuff is awesome. However, Javascript fatigue is a real problem which stems from developers new and experienced alike having trouble keeping up with the changing ecosystem. Javascript the language itself is complex enough, but then stack on all the libraries, frameworks, bundlers, compilers, transpilers, linters, platforms and it's enough for anyone to get confused.
 
 This article and the ones that proceed it are designed to sum up the different parts of the ecosystem to help new programmers get up to speed more quickly. Although each one of them requires a lot of time to become an expert, and very few people (actually, probably noone) understands them all a super high level, these articles can be kind of a "reference" to help you get the gist of each part. Let's dive in!
