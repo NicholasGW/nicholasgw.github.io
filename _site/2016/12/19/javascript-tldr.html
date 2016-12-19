@@ -5,24 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 
-    <title>A concise(ish) guide to Javascript</title>
-    <meta name="description" content="">
+    <title>JS TL;DR</title>
+    <meta name="description" content="This is everything I know about JavaScript in TL;DR form. JS is great, the ecosystem is huge and hard for beginners. Gain some sanity here. More in-depth wri...">
     <meta name="robots" content="index,follow">
     
         <meta name="author" content="Nick Kennedy">
     
     <meta itemprop="name" content="Nick Kennedy">
 
-    <meta property="og:url" content="http://localhost:4000/2016/12/19/welcome.html" />
+    <meta property="og:url" content="http://localhost:4000/2016/12/19/javascript-tldr.html" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="A concise(ish) guide to Javascript" />
+    <meta property="og:title" content="JS TL;DR" />
     <meta property="og:description" content="Blog posts about JS" />
     <meta property="og:image" content="http://localhost:4000/images/favicon.png" />
     <meta property="og:image:type" content="image/png" />
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@nicholasgwk" />
-    <meta name="twitter:title" content="A concise(ish) guide to Javascript" />
+    <meta name="twitter:title" content="JS TL;DR" />
     <meta name="twitter:description" content="Blog posts about JS" />
     <meta name="twitter:image" content="http://localhost:4000/images/favicon.png" />
 
@@ -53,7 +53,7 @@
           <div class="col s12 m8 offset-m2 l6 offset-l3">
             <article class="left-align" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h2 class="my-mini-heading" itemprop="name headline">A concise(ish) guide to Javascript<br>
+  <h2 class="my-mini-heading" itemprop="name headline">JS TL;DR<br>
     <span class="my-mini-heading-sub">
     <time datetime="2016-12-19T00:00:00-05:00" itemprop="datePublished">
       Dec 19, 2016
@@ -61,7 +61,38 @@
     </span></h2>
 
   <div class="my-text-body">
-    
+    <p>This is everything I know about JavaScript in TL;DR form. JS is great, the ecosystem is huge and hard for beginners. Gain some sanity here. More in-depth writing can be down in the series of articles I’m writing called “A concise(ish) guide to JavaScript”.</p>
+
+<h3 id="begin">Begin</h3>
+
+<p>JavaScript(JS) is a programming language originally designed for the web.</p>
+
+<p>ECMAScript(ES) is the <em>specification</em> for the language. JavaScript is the de-facto implementation. Specifications are like building plans, the implementation is like the building.</p>
+
+<p>ES used to update infrequently, and used a number for its version. ES3 was version 3, ES5 version 5 etc. Now that JS is so crazy popular ES is updating every year, hence ES2016 and ES2017.</p>
+
+<p>Broswers run JS by running them through a Javascript Engine, which turns JS into a different code the browser can execute on a computer. Every major browser uses a different JS Engine (Chrome - V8, Firefox - SpiderMonkey, IE - Chakra, etc).</p>
+
+<p>JS used to be added to a webpage with a simple script tag. This still works and is all you need for super simple apps or prototyping. It looks like this in HTML:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+      <span class="p">...</span><span class="nx">some</span> <span class="nx">JS</span>
+    <span class="nt">&lt;/script&gt;</span>
+    <span class="c">&lt;!-- or --&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"someJSfile.js"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/script&gt;</span>
+
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+  My cool page!
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+
+<p>Node is a JS Runtime that uses Chrome’s V8 Engine to let you run JS code on a computer or server directly rather than in a browser. It also lets you do cool things like read/write files or use sockets, something you can’t really do as easily with code in a browser.</p>
 
   </div>
 
@@ -88,7 +119,7 @@
   
   <a class="waves-effect waves-teal btn-flat btn-large" href="/material-theme/">Home</a>
   
-        <a class="waves-effect waves-teal btn-flat btn-large my-thin-btn disabled"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+    <a class="waves-effect waves-teal btn-flat btn-large my-thin-btn" href="/material-theme/2016/12/19/a-concise-guide-part-1.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
   
   </div>
 </article>

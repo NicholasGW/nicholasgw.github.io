@@ -5,17 +5,106 @@
     <description>Blog posts about JS</description>
     <link>http://localhost:4000/material-theme/</link>
     <atom:link href="http://localhost:4000/material-theme/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 19 Dec 2016 13:03:38 -0500</pubDate>
-    <lastBuildDate>Mon, 19 Dec 2016 13:03:38 -0500</lastBuildDate>
+    <pubDate>Mon, 19 Dec 2016 14:32:13 -0500</pubDate>
+    <lastBuildDate>Mon, 19 Dec 2016 14:32:13 -0500</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
     
       <item>
-        <title>A concise(ish) guide to Javascript</title>
-        <description>
+        <title>JS TL;DR</title>
+        <description>&lt;p&gt;This is everything I know about JavaScript in TL;DR form. JS is great, the ecosystem is huge and hard for beginners. Gain some sanity here. More in-depth writing can be down in the series of articles I’m writing called “A concise(ish) guide to JavaScript”.&lt;/p&gt;
+
+&lt;h3 id=&quot;begin&quot;&gt;Begin&lt;/h3&gt;
+
+&lt;p&gt;JavaScript(JS) is a programming language originally designed for the web.&lt;/p&gt;
+
+&lt;p&gt;ECMAScript(ES) is the &lt;em&gt;specification&lt;/em&gt; for the language. JavaScript is the de-facto implementation. Specifications are like building plans, the implementation is like the building.&lt;/p&gt;
+
+&lt;p&gt;ES used to update infrequently, and used a number for its version. ES3 was version 3, ES5 version 5 etc. Now that JS is so crazy popular ES is updating every year, hence ES2016 and ES2017.&lt;/p&gt;
+
+&lt;p&gt;Broswers run JS by running them through a Javascript Engine, which turns JS into a different code the browser can execute on a computer. Every major browser uses a different JS Engine (Chrome - V8, Firefox - SpiderMonkey, IE - Chakra, etc).&lt;/p&gt;
+
+&lt;p&gt;JS used to be added to a webpage with a simple script tag. This still works and is all you need for super simple apps or prototyping. It looks like this in HTML:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;JS&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- or --&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;someJSfile.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+  My cool page!
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Node is a JS Runtime that uses Chrome’s V8 Engine to let you run JS code on a computer or server directly rather than in a browser. It also lets you do cool things like read/write files or use sockets, something you can’t really do as easily with code in a browser.&lt;/p&gt;
 </description>
         <pubDate>Mon, 19 Dec 2016 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/material-theme/2016/12/19/welcome.html</link>
-        <guid isPermaLink="true">http://localhost:4000/material-theme/2016/12/19/welcome.html</guid>
+        <link>http://localhost:4000/material-theme/2016/12/19/javascript-tldr.html</link>
+        <guid isPermaLink="true">http://localhost:4000/material-theme/2016/12/19/javascript-tldr.html</guid>
+        
+        <category>intro</category>
+        
+        <category>javascript</category>
+        
+        <category>ecosystem</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>A concise(ish) guide to Javascript, part 1</title>
+        <description>&lt;p&gt;Javascript (JS) is awesome. The community is awesome, the ecosystem is awesome, and how easily you can build cool stuff is awesome. However, Javascript fatigue is a real problem which stems from developers new and experienced alike having trouble keeping up with the changing ecosystem. Javascript the language itself is complex enough, but then stack on all the libraries, frameworks, bundlers, compilers, transpilers, linters, platforms and it’s enough for anyone to get confused.&lt;/p&gt;
+
+&lt;p&gt;This article and the ones that proceed it are designed to sum up the different parts of the ecosystem to help new programmers get up to speed more quickly. Although each one of them requires a lot of time to become an expert, and very few people (actually, probably noone) understands them all a super high level, these articles can be kind of a “reference” to help you get the gist of each part. Let’s dive in!&lt;/p&gt;
+
+&lt;h3 id=&quot;ecmascript-and-javascript&quot;&gt;ECMAScript and JavaScript&lt;/h3&gt;
+
+&lt;p&gt;JavaScript, ECMA? ES6, ES2017? What?&lt;/p&gt;
+
+&lt;p&gt;Confusing, but easy to clear up!&lt;/p&gt;
+
+&lt;p&gt;ECMAScript is name of the official &lt;em&gt;specification&lt;/em&gt; for a scripting language. It basically says “if you make a language that follows all these rules, it counts as an ECMAScript &lt;em&gt;implementation&lt;/em&gt;”. Implementation just means the thing you created actually works. Specs are like building plans, implementations are like buildings.&lt;/p&gt;
+
+&lt;p&gt;JavaScript is the de-facto ECMAScript implementation, meaning it’s the one that everyone uses. Long ago there used to be competing implementations, but now people us ECMAScript and JavaScript pretty interchangeably.&lt;/p&gt;
+
+&lt;p&gt;Before recently, the version of ECMAScript was defined with a single number. ES3 was version three, ES6 was version 6 etc. Since JavaScript is now super popular, the folks who maintain the spec decided to make a release every year. Hence, ES2016 is the release for 2016, ES2017 is for 2017, etc. We won’t dive in now, but this release cycle has certain implications with other tools you might use, but don’t worry for now!&lt;/p&gt;
+
+&lt;h3 id=&quot;browser-node-etc&quot;&gt;Browser, Node etc.&lt;/h3&gt;
+
+&lt;p&gt;Node? Browsers? Modules? Bundlers? V8? Minifiers? What?&lt;/p&gt;
+
+&lt;h4 id=&quot;browsers&quot;&gt;Browsers&lt;/h4&gt;
+&lt;p&gt;Let’s slow down and go back to the old school. Originally, JavaScript was designed and intended to run on websites. That’s it. Furthermore, it wasn’t really intended to create rich applications in the way we use it now…it was to write small scripts to add some cool features to a web page that was mostly text.&lt;/p&gt;
+
+&lt;p&gt;The original way to include JavaScript on a webpage was to put a ‘script’ tag in the HTML, like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-HTML&quot;&gt;&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;script&amp;gt;
+      ...some JavaScript
+    &amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+  My cool page!
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This was great for the browser and simple sites, and will still work just fine today!&lt;/p&gt;
+
+&lt;p&gt;But how do browsers understand and run the Javascript? The answer: With a Javascript Engine! A Javascript engine just takes Javascript and turns it into different code that the browser can run. It’s obviously a little more complicated, but a fine summation is a JS engine translates JS into machine-code.&lt;/p&gt;
+
+&lt;p&gt;Each browser uses their own Javascript Engine. Chrome uses V8, FireFox uses SpiderMonkey, IE uses Chakra, etc.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 19 Dec 2016 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/material-theme/2016/12/19/a-concise-guide-part-1.html</link>
+        <guid isPermaLink="true">http://localhost:4000/material-theme/2016/12/19/a-concise-guide-part-1.html</guid>
         
         <category>intro</category>
         
