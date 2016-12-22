@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "A concise(ish) guide to Javascript, part 1"
+title:  A concise(ish) guide to Javascript, part 1
 date:   2016-12-19
-tags: ['intro', 'javascript', 'ecosystem']
-author: "Nick Kennedy"
+summary: A concise guide
+categories: intro javascript ecosystem
 ---
 
 *** WORK IN PROGRESS ***
